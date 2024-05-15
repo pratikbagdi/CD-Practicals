@@ -1,0 +1,32 @@
+Aim :- 
+Write a LEX program to recognize valid strings using regular expression: (a|b)*abb
+
+Test case :- 
+Valid strings: abababb, abb, bbbabb
+Invalid strings: baba, bba, bbb, ababba
+
+Tools :- 
+Software: 1. Flex Software (Compiler) ; Specifications :- Windows 10, 64 bit, exe.
+Hardware: 2. Computer System ; Specification :- Windows 10, 500 GB HDD/ 250 GB SSD, i3 processor
+
+Theory :-
+Regular Expression :-
+The lexical analyzer needs to scan and identify only a finite set of valid string/ token/ lexeme that belong to the language in hand. Regular expression is an important notation for specifying pattern . Each pattern matches a sort of strings. So regular expression serve as a names for a set of strings.
+Regular expression can also be described as a sequence of pattern that define a string. Regular expression is used to match character combinations in strings. String searching algorithm used this pattern to find the operations on a string.
+
+Operations :-
+The various operations on languages are
+1) Union of two languages L and M is written as 
+L U M = {S | S is in L or S is in M} 
+2) Concatenation of two language L and M is written as
+LM = {St | S is in L and t is in M}
+3) Kleane closure of a language L is written as L*
+L* = zero or more occurrence of language L
+
+Flex software is compiler which is used to compile lex code. We will apply some regular expression to fulfil give condition.
+
+Lex Program :-
+
+Conclusion :-
+By executing this program, the lex program recognize given string by using regular expression. Implemented successfully and all test cases verified.
+

@@ -1,0 +1,23 @@
+Aim :-
+Design a program to evaluate postfix expression.
+
+Tools :-
+1. C Compiler ; Specification :- Turbo C, acc, any
+2. Computer System ; Specification :- Windows, 4 GB RAM ; Quantity:- 1
+
+Theory :-
+Postfix Notation: way of writing arithmetic expressions in which each operation follow it’s operands
+e.g., “ 3 + 4 ” => “ 3 4 + ”
+Set Steps to evaluate postfix expression i.e., " 3 4 + "
+=>Scan expression from left to right : 
+- push 3 onto stack ( stack : 3 )
+- push 4 onto stack ( stack : 4 )
+- pop 3 and 4 from stack add them together ( 3 + 4 = 7 ) and push the result (i.e., 7) back onto stack
+Return expression present at the top of stack which is 7.
+
+Lex Program :-
+
+C Program :-
+
+Conclusion :-
+The program to evaluate postfix expression designed successfully.

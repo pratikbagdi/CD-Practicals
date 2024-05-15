@@ -1,0 +1,53 @@
+Aim :-
+Write a program to eliminate left recursion from the grammar.
+
+Test Case :- 
+1. E : E+E | E-E | id
+2. S : (L) | a
+    L : L,S | S
+
+Tools :- 
+1. Lex Compiler (language compiler)
+Specifications :- Any GDB Compiler (MinGW)
+
+2. Computer System.
+Specifications :- Windows 10, 150 GB HDD / 8 GB RAM, i3 processor
+Quantity :- 1
+
+Theory :- 
+A Grammar G (V, T, P, S) is left recursive of it has a production in the form
+A -> A alpha | beta
+The above is left recursive because the left of production is occurring of a first position on the right side of production. It can eliminate left recursion by replacing a pair of production with.
+A -> B A’
+A’ -> alpha A’ | epsilon
+
+1. Left Recursion can be eliminated by introducing new non- terminal. A such that, this process can also define as elimination of direct left recursion.
+Left recursion grammar 
+A -> A alpha | beta   
+Removal of left recursion
+A -> beta A’   
+A -> alpha A’ | epsilon   
+
+2. Eliminate indirect left recursion
+Step one describes a rules to eliminate direct left recursion from a production. To eliminate left recursion from an entire grammar may be more difficult because of indirect left recursion.
+For e.g.,
+A -> Bxy | x
+B -> CD
+C -> A|C
+D -> d
+
+For e.g., E-> E+ T | T
+Comparing it with a -> A alpha | beta
+A = E   alpha = +T   beta = T
+A -> A alpha | beta
+A -> beta A’			E -> T E’
+A’ -> alpha A’ | epsilon	E’ -> + T E’ | epsilon
+
+C compiler will compile the code which used for eliminate left recursion.
+
+Lex Program :-
+
+C Program :-
+
+Conclusion :-
+By implementing this practical we learnt about the process to eliminate left recursion from the given grammar, and understand the concept of elimination of left recursion from grammar.

@@ -1,0 +1,26 @@
+Aim :-
+Source code is a text file. Constants used in the program are strings. Write a program to read integer constants as a string and convert it decimal number. Integer constants are represented in decimal, octal, and hexadecimal. It may be positive or negative.
+
+Test Case :-
+a. Decimal Constant : +15, -5, 123
+b. Octal constant : +0123, 0117, -0777
+c. Hexadecimal Constant : -0X1A, 0X1B, 0x2a, 1c3d
+
+Tools :-
+•	Software :- Lex Compiler
+•	Hardware :- Computer System
+Specifications :- Windows 10, 500 GB HDD / 250 GB SSD, i3 processor
+
+Theory :-
+Integer Constants - An integer constant can be a decimal, octal, or hexadecimal constant. Constants refer to fixed values that the program may not alter during it's execution. The constants can be of the basic data types like an integer constant, a floating constant, a character constant or a string literal.
+In this practical we used  Integer Constants are represented in Decimal, Octal and Hexadecimal, it can be positive or negative.
+Octal - Integer Constant represented in decimal octal. A prefix specifies the base or radix: 0 for octal representation and it specifies a base: 8 for octal.
+Hexadecimal - Integer Constant represented in Decimal Hexadecimal constant :- A prefix specifies a base or radix, "0x" or "0X" for hexadecimal constants, and base for hexadecimal is 16.
+Default Integer Constants consider (base 10) Decimal.
+
+Lex Program :-
+
+C Program :-
+
+Conclusion :-
+The Lex program designed to read integer constants as strings and convert them into decimal numbers has successfully addressed the aim of the task. By recognizing er constants in various format such as Decimal, Octal and Hexadecimal and handling both positive and negative values, the program demonstrates to capability to accurately process and convert numerical inputs from text files.

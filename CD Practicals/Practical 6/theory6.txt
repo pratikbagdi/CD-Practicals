@@ -1,0 +1,26 @@
+Aim :-
+Design a program for basic calculator using YACC or BISON.
+
+Tools :-
+1. Compile ; Specification :- YACC OF BISON
+2. Computer System ; Specification :- Windows, 4 GB RAM, 1 TB HDD ; Quantity :- 1
+
+Theory :-
+YACC ( Yet Another Compiler Compiler ) & BISON are tool that generate parsers ( Programs analyze structure of text on code ) based on formal design of language grammar commonly used in development of compilers, interpreters & other language based software.
+Syntax – 
+% {
+    //declaration section.
+% }
+% %
+% token definition
+    grammar declaration
+% %
+int main ( ) {
+yy parse ( ); 
+return 1;
+}
+
+Lex Program :-
+
+Conclusion :-
+The program for basic calculator using YACC or BISON designed successfully.

@@ -1,0 +1,43 @@
+Object Code :-
+# Data Section
+.data
+arr: .word 64, 25, 12, 22, 11
+n: .word 5
+
+# Text Section
+.text
+.global main
+
+main:
+    # Initialize variables
+    ldr r1, =n      @ Load n
+    ldr r2, =arr    @ Load address of arr
+    mov r3, #0      @ Initialize i
+    mov r4, #0      @ Initialize j
+    mov r5, #0      @ Initialize minIndex
+
+L1: cmp r3, r1       @ Compare i with n
+    bge L2           @ If i >= n, go to L2
+    mov r5, r3       @ minIndex = i
+    add r4, r3, #1   @ j = i + 1
+
+L3: cmp r4, r1       @ Compare j with n
+    bge L4           @ If j >= n, go to L4
+    ldr r6, [r2, r4, LSL #2]    @ Load arr[j]
+    ldr r7, [r2, r5, LSL #2]    @ Load arr[minIndex]
+    cmp r6, r7       @ Compare arr[j] with arr[minIndex]
+    bge L6           @ If arr[j] >= arr[minIndex], go to L6
+    mov r5, r4       @ minIndex = j
+
+L6: add r4, r4, #1  @ j = j + 1
+    b L3             @ Go to L3
+
+L4: ldr r8, [r2, r5, LSL #2]    @ Load arr[minIndex]
+    ldr r9, [r2, r3, LSL #2]    @ Load arr[i]
+    str r8, [r2, r3, LSL #2]    @ arr[i] = arr[minIndex]
+    str r9, [r2, r5, LSL #2]    @ arr[minIndex] = arr[i]
+
+L7: add r3, r3, #1  @ i = i + 1
+    b L1             @ Go to L1
+
+L2:                 @ Halt

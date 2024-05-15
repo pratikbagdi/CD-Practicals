@@ -1,0 +1,22 @@
+Aim :-
+Design recursive descent parser for the grammar 
+E -> +EE | -EE | a | b
+
+Tools :-
+1. C Compiles ; Specification :- Turbo, GCC, acc, any ; Quantity :- 1
+2. Complex System ; Specification :- Windows, 4 GB, RAM 1 TB HDD ; Quantity :- 1
+
+Theory :- 
+A recursive descent parser is a top-down parsing technique where a parser tree is built from top and constructed down to leave this type of parser starts with highest level of grammar & recursively expands non-terminals until a terminal symbol is reached.
+To implement this grammar using recursive descent parser, we need to follow steps to implement parser :-
+1. Analyze grammar, identity terminals, non-terminals, production rule
+2. Write function to parse each non-terminal
+3. Use tokenizer to convert input string into list of tokens. 
+4. Pass list tokens as input, function should return whether string can be derived from grammar or not.
+
+Lex Program :-
+
+C Program :-
+
+Conclusion :-
+The program to implement recursive descent parser for grammar designed successfully.

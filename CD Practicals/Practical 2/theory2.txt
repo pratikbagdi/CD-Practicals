@@ -1,0 +1,56 @@
+Aim :-
+Write a LEX program to recognize tokens
+1) Identifier
+2) Integer Constant ( Decimal, Octal, Hexadecimal)
+3) Real Constants (Floating point and Exponential format)
+
+Test Case :-
+a. Integer Constant e.g., +15, -5, 0123, 0X1A
+b. Floating point format e.g., +0.5, 236.0, .567, -26.89
+c. Exponential format e.g., 1.6e-19, -0.5E+2, +1.7E4, .26e-7
+
+Tools :-
+1. LEX Compiler ; Specification :- Windows 10, 64 bit
+2. Compiler System ; Specification :- Window 10, 500 GB HDD / 250 GB SSD, i3 processor ; Quantity :- 1 
+
+Theory :-
+a) Regular Expression for Decimal Constant
+Rules: 1. must have at least one digit
+2. may be +ve or -ve
+3. No spaces, comma, period (.) are allowed.
+Regular Expression :- (+ | -) ? ( Digit ) +
+
+b) Regular Expression for real Constant (Flouting point notation)
+Rules: 1. must have atleast one digit 
+2. may be +ve or -ve
+3. must contain decimal point
+4. at least are digit after decimal point
+5. No (-) (,) (.)
+Regular Expression :- (+ | -) ? ( Digit ) * . ( Digit ) +
+
+In Lexical analysis, the source code is scanned and broken down into these individual tokens, which are then passed on the next stage of the compilation or interpretation process. Some of them can be described as follows :-
+1) Identifier :- ^ [ a-z A-Z _ ][ a-z A-Z 0-9 ] * $
+Here ' ^ ' - matches the beginning of the string
+' [ a-z A-Z _ ] ' - matches any uppercase letter lowercase letter, or underscore
+' [a-z A-Z 0-9 _ ] ' - matches zero or more occurrences of any letter, lowercase letter, digit or underscore
+‘$’ - matches the end of string
+
+2) Integer Constant :- Regular expression for decimal constant can be-
+a. must have at least one digit
+b. may be have +ve or -ve
+c. No space and commas period (.) are allowed 
+( + |- ) ? (Digit) +
+
+3) Real Constant - This will include two categories
+i) Floating point - must contain decimal paint.
+ii) Exponential point - must contain mantissa and Exponent regular expression for real constant is seperated by ‘E’ or ‘e’ 
+exponent [ e E ] [ + - ] . { digit } + { digit } + “.” { digit } * { exponent } ? | { digit } + { exponent } 
+
+Lex Program :-
+
+Conclusion :-
+We successfully able to learn the concept of lexical analysis like how it breaks the source code into different types of tokens and also implemented lex program to recognize tokens.
+1) Identifier
+2) Integer Constant
+3) Real Constant
+
